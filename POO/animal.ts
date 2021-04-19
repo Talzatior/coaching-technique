@@ -26,8 +26,9 @@ export class Animal {
     //#endregion
 
     //#region Public method
-        dormir() {
-            console.info('je dors');
+        dormir(lieu: string) {
+            const endroitOuJeDors = lieu;
+            console.info(this._prenom + ' dort ' + endroitOuJeDors + '.');
         }
     //#endregion
 }
