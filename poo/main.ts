@@ -1,11 +1,20 @@
 import { Animal } from './animal';
+import { Chien } from './chien';
+import { Gorille } from './gorille';
 
-const chien = new Animal('Medor', '123456', 'chien');
+let gorille: Animal;
+
+//const chien = new Animal('Medor', '123456');
+gorille = new Gorille('King Kong', '151515');
+gorille.dormir();
+
+gorille = new Chien('medor', '8869663');
+gorille.dormir();
 
 // console.log(chien.toto);
 // chien.type ='dd';
 
-chien.dormir();
+//chien.dormir();
 
 // Ajouter un second animal => un gorille
 // Et il dort, lui, sur des feuilles.
