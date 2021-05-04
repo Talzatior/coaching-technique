@@ -1,6 +1,10 @@
 import { Animal } from './animal';
 
-const chien = new Animal('Medor', '123456');
+const chien = new Animal('Medor', '123456', 'chien');
+
+// console.log(chien.toto);
+// chien.type ='dd';
+
 chien.dormir();
 
 // Ajouter un second animal => un gorille
