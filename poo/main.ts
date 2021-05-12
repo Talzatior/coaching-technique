@@ -11,6 +11,15 @@ gorille.dormir();
 gorille = new Chien('medor', '8869663');
 gorille.dormir();
 
+const lesAnimaux: Animal[] = [];
+
+lesAnimaux.push(
+    new Gorille('King Kong', '151515'),
+    new Chien('medor', '8869663')
+);
+
+lesAnimaux.forEach(item => item.dormir());
+
 // console.log(chien.toto);
 // chien.type ='dd';
 
