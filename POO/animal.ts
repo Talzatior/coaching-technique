@@ -16,19 +16,21 @@ export class Animal {
     //#region Fields 
         private _prenom: string;
         private _matricule: string;
+        private _ouJeDors: string;
     //#endregion
 
-    //#region 
-        constructor(unPrenom: string, unMatricule: string) {
+    //#region Constructors
+        constructor(unPrenom: string, unMatricule: string, ouJeDors: string) {
             this._prenom = unPrenom;
             this._matricule = unMatricule;
+            this._ouJeDors = ouJeDors;
         }
     //#endregion
 
     //#region Public method
-        dormir(lieu: string) {
-            const endroitOuJeDors = lieu;
-            console.info(this._prenom + ' dort ' + endroitOuJeDors + '.');
+        dormir() {
+            let message = 'Je dors ';
+            console.info(message + this._ouJeDors);
         }
     //#endregion
 }
