@@ -33,13 +33,11 @@ export abstract class Animal {
     }
 
     seDeplacer() {
-        
+
     }
     //#endregion
 
     //#region Properties
-    protected getLocation(): string {
-        return '';
-    }
+    protected abstract getLocation(): string;
     //#endregion
 }
