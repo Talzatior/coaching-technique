@@ -8,6 +8,7 @@ let gorille: Animal;
 gorille = new Gorille('King Kong', '151515');
 gorille.dormir();
 
+
 gorille = new Chien('medor', '8869663');
 gorille.dormir();
 

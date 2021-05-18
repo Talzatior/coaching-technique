@@ -2,10 +2,8 @@ import { Animal } from "./animal";
 
 export class Gorille extends Animal {
     //#region Public methods
-    dormir() {
-        super.dormir();
-
-        console.info('sur un lit de feuille');
+    getLocation(): string {
+        return 'sur un lit de feuille';
     }
     //#endregion
 }

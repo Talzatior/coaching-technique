@@ -12,6 +12,7 @@
  * (Soigner)
  */
 
+
 export abstract class Animal {
     //#region Fields
     private _prenom: string;
@@ -27,12 +28,18 @@ export abstract class Animal {
 
     //#region Public methods
     dormir() {
-        let message = 'je dors';
+        let message = 'je dors' + this.getLocation();
         console.info(message);
+    }
+
+    seDeplacer() {
+        
     }
     //#endregion
 
     //#region Properties
-
+    protected getLocation(): string {
+        return '';
+    }
     //#endregion
 }
