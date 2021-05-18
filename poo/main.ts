@@ -26,14 +26,7 @@ lesAnimaux.push(
 
 lesAnimaux.forEach(item => {
     item.dormir();
-
-    const oiseau:Oiseau = item as Oiseau;
-    if(oiseau.voler) {
-        oiseau.voler();
-    }
-    
-    // identique
-    oiseau.voler?.call(oiseau);
+    item.seDeplacer();
 });
 
 // console.log(chien.toto);
