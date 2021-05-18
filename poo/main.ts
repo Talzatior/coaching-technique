@@ -1,6 +1,9 @@
+import { Aigle } from './aigle';
 import { Animal } from './animal';
 import { Chien } from './chien';
 import { Gorille } from './gorille';
+import { Oiseau } from './oiseau';
+import { Perroquet } from './perroquet';
 
 let gorille: Animal;
 
@@ -16,10 +19,22 @@ const lesAnimaux: Animal[] = [];
 
 lesAnimaux.push(
     new Gorille('King Kong', '151515'),
-    new Chien('medor', '8869663')
+    new Chien('Medor', '8869663'),
+    new Perroquet('Coco', '65656'),
+    new Aigle('Thorondor', '74123')
 );
 
-lesAnimaux.forEach(item => item.dormir());
+lesAnimaux.forEach(item => {
+    item.dormir();
+
+    const oiseau:Oiseau = item as Oiseau;
+    if(oiseau.voler) {
+        oiseau.voler();
+    }
+    
+    // identique
+    oiseau.voler?.call(oiseau);
+});
 
 // console.log(chien.toto);
 // chien.type ='dd';

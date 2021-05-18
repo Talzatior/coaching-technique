@@ -28,13 +28,11 @@ export abstract class Animal {
 
     //#region Public methods
     dormir() {
-        let message = 'je dors' + this.getLocation();
+        let message = 'je dors ' + this.getLocation();
         console.info(message);
     }
 
-    seDeplacer() {
-
-    }
+    abstract seDeplacer();
     //#endregion
 
     //#region Properties
