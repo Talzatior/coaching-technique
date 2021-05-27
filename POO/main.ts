@@ -24,7 +24,7 @@ lesAnimaux.push(
 lesAnimaux.forEach(item => {
     item.dormir();
     item.seDeplacer();
-})
+});
 
 // const chien = new Animal('Medor', '123456');
 // chien.dormir("dans une niche");

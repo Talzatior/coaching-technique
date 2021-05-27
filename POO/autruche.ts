@@ -6,7 +6,7 @@ export class Autruche extends Oiseau {
         return 'debout sur le sol !'
     }
 
-    voler() {
+    seDeplacer() {
         console.info('Je ne vole pas, mais je cours vite !!');
     }
     //#endregion
