@@ -1,12 +1,13 @@
 import { Oiseau } from './oiseau';
 
 export class Autruche extends Oiseau {
-    //#region 
-    dormir(){
-        super.dormir();
+    //#region Methods
+    protected getLocation(): string {
+        return 'debout sur le sol !'
     }
+
     voler() {
-        super.voler();
+        console.info('Je ne vole pas, mais je cours vite !!');
     }
     //#endregion
 }

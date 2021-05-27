@@ -1,12 +1,14 @@
-import { Oiseau } from './oiseau';
+import { OiseauVolant} from './oiseauVolant';
 
-export class Perroquet extends Oiseau {
-    //#region 
-    dormir(){
-        super.dormir();
-    }
+export class Perroquet extends OiseauVolant {
+    //#region Methods
     voler() {
-        super.voler();
+        console.info('Je vole comme un pet !!');
     }
+
+    protected getLocation(): string {
+        return 'sur mon perchoir';
+    }
+
     //#endregion
 }

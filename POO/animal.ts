@@ -12,25 +12,29 @@
     (Soigner)
 */
 
-export class Animal {
+export abstract class Animal {
     //#region Fields 
         private _prenom: string;
         private _matricule: string;
-        private _ouJeDors: string;
     //#endregion
 
     //#region Constructors
-        constructor(unPrenom: string, unMatricule: string, ouJeDors: string) {
+        constructor(unPrenom: string, unMatricule: string) {
             this._prenom = unPrenom;
             this._matricule = unMatricule;
-            this._ouJeDors = ouJeDors;
         }
     //#endregion
 
     //#region Public method
         dormir() {
-            let message = 'Je dors ';
-            console.info(message + this._ouJeDors);
+            let message = 'Je dors ' + this.getLocation();
+            console.info(message);
         }
+
+        abstract seDeplacer();
+    //#endregion
+    protected abstract getLocation(): string;
+    //#region 
+    
     //#endregion
 }

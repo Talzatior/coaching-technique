@@ -1,12 +1,14 @@
-import { Oiseau } from './oiseau';
+import { OiseauVolant } from './oiseauVolant';
 
-export class Aigle extends Oiseau {
-    //#region 
-    dormir(){
-        super.dormir();
-    }
+export class Aigle extends OiseauVolant {
+    //#region Methods
     voler() {
-        super.voler();
+        console.info('Je tourne en rond pour traquer ma proie !!');
     }
+
+    protected getLocation(): string {
+        return 'sur une branche';
+    }
+
     //#endregion
 }

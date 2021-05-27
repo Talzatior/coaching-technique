@@ -1,29 +1,14 @@
 import { Animal } from './animal';
 
-export class Oiseau extends Animal {
-    //#region Fields
-    private _vole: boolean;
-    animal: Animal;
-    //#endregion
+export abstract class Oiseau extends Animal {
 
-    //#region Constructors
-    constructor(unPrenom: string, unMatricule: string, ouJeDors: string, vole: boolean){
-        super(unPrenom, unMatricule, ouJeDors);
-        this._vole = vole;
-    }
-    //#endregion
-
-    //#region Method
-    dormir() {
-        super.dormir();
-    }
+    //#region Methods
     voler() {
-        if(this._vole) {
-            console.info('Je vole !')
-        }
-        else {
-            console.info('Je ne vole pas !')
-        }
+        console.info('I believe I can fly !!');
+    }
+
+    seDeplacer() {
+        this.voler();
     }
     //#endregion
 }
