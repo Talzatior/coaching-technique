@@ -1,9 +1,12 @@
 import { Aigle } from './aigle';
 import { Animal } from './animal';
+import { ChauveSouris } from './chauve-souris';
 import { Chien } from './chien';
 import { Gorille } from './gorille';
 import { Oiseau } from './oiseau';
 import { Perroquet } from './perroquet';
+import { Superman } from './superman';
+import { Volant } from './volant';
 
 let gorille: Animal;
 
@@ -21,13 +24,26 @@ lesAnimaux.push(
     new Gorille('King Kong', '151515'),
     new Chien('Medor', '8869663'),
     new Perroquet('Coco', '65656'),
-    new Aigle('Thorondor', '74123')
+    new Aigle('Thorondor', '74123'),
+    new ChauveSouris('Batman', '545454')
 );
+
+
 
 lesAnimaux.forEach(item => {
     item.dormir();
-    item.seDeplacer();
+    item.seDeplacer();    
+
+    // (<Volant> item)?.voler();
 });
+
+
+const lesVolants: Volant[] = [
+    new Perroquet('chico', '5454'),
+    new ChauveSouris('Batman', '7879'),
+    new Superman()
+];
+lesVolants.forEach(item => item.voler());
 
 // console.log(chien.toto);
 // chien.type ='dd';
