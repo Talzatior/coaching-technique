@@ -1,5 +1,5 @@
 import { People } from "./models/people";
 
-export interface PeopleService {
+export interface IPeopleService {
     getAll(): People[];
 }
